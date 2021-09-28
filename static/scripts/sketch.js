@@ -9,6 +9,9 @@ let grid = [];
 
 
 function setup() {
+    let reader = new FileReader();
+    
+
     createCanvas(400, 400);
     background(70);
     frameRate(10000); 
