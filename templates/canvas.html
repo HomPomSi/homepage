@@ -1,10 +1,17 @@
 {% extends 'base.html' %}
 
 {% block content %}
+    
+
+    <!-- TODO Add controls for langtons ant -->
+
+
+
     <!-- Uncomment next line for CDN version of p5 -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script> -->
     <script type="text/javascript" src="{{ url_for('static', filename='scripts/p5.min.js')}}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='scripts/sketch.js')}}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='scripts/canvas.js')}}"></script>
 {% endblock %}
 
 
