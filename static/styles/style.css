@@ -55,7 +55,8 @@ nav ul a li {
     width: calc(calc(100vw - 36px) / 4);
     text-align: center;
     font-size: 1.5vw;
-    float: left
+    font-weight: bold;
+    float: left;
 }
 
 /* home */
