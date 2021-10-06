@@ -37,8 +37,13 @@ header {
     text-align: center;
 }
 
+p.title {
+    text-shadow: 3px 3px #222;
+}
+
 nav {
     height: calc(1.5vw + 16px);
+    margin-top: 12px;
 }
 
 nav ul {
@@ -53,7 +58,7 @@ nav ul a li {
     border: 1px solid #000;
     padding: 8px 0px 8px 0px;
     background: #1f2f2f;
-    width: calc(calc(100vw - 36px) / 4);
+    width: calc(calc(100vw - 38px) / 4);
     text-align: center;
     font-size: 1.5vw;
     font-weight: bold;
