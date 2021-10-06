@@ -18,26 +18,17 @@
                 Lakis' exercise project in webdev
             </p>
             <nav id="nav">
-                <ul id="nav-list">
-                    <a href="http://127.0.0.1:8000/home">
-                        <li>Home</li>
-                    </a>
-                    <a href="http://127.0.0.1:8000/canvas">
-                        <li>Canvas</li>
-                    </a>
-                    <a href="http://127.0.0.1:8000/about">
-                        <li>About</li>
-                    </a>
-                    <a href="http://127.0.0.1:8000/contact">
-                        <li>Contact</li>
-                    </a>
-                </ul>
+                <a href="http://127.0.0.1:8000/home">Home</a>
+                <a href="http://127.0.0.1:8000/canvas">Canvas</a>
+                <a href="http://127.0.0.1:8000/about">About</a>
+                <a href="http://127.0.0.1:8000/contact">Contact</a>
             </nav>
         </header>
         
-        
-        {% block content%}
-        {% endblock%}
+        <div class="content"> 
+            {% block content%}
+            {% endblock%}
+        </div>
 
         <footer>
             Footer<br>LakisG<br>some@thing.de<br>+49 1312<br>bla bla
