@@ -80,7 +80,6 @@ footer {
     align-items: center;
     background-color: #2f3f3f;
     padding: 0vw 0vw 0vw 10vw;
-    order: 2;
 }
 
 
@@ -89,7 +88,9 @@ p.introduction {
     padding: 32px;
 }
 
+
 /* about */
+
 
 /* contact */
 div.contacts {
@@ -120,6 +121,7 @@ div.contact-logos img:hover {
     transform: rotateZ(-360deg);
     transition: 0.5s ease;
 }
+
 
 /* canvas */
 div.canvas {
