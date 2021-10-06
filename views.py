@@ -26,5 +26,9 @@ def about():
 def contact():
     return render_template("contact.html")
 
+@views.route("/canvas/langtonsant")
+def langtonsant():
+    return render_template("canvas/langtonsant.html")
+
 if __name__ == "__main__":
     print("useless call")
