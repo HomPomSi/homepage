@@ -29,14 +29,18 @@ body {
 header {
     display: flex;
     flex-direction: column;
+    border: 1px solid #000;
     width: 100%;
-    font-size: 4vw;
+    font-size: 4vw;    
+    background-color: #2f3f3f;
     color: #676767;
+    margin-bottom: 8px;
     text-align: center;
 }
 
 p.title {
     width: 100%;
+    padding: 12px 0px 12px 0px;
     text-shadow: 3px 3px #222;
 }
 
@@ -45,11 +49,14 @@ nav {
     flex-direction: row;
     font-size: 1.5vw;
     font-weight: bold;
+    border-top: 1px solid #000;
+    border-right: 1px solid #000;
     justify-content: space-evenly;
 }
 
 nav a {
     width: 25%;
+    border-left: 1px solid #000;
     padding: 12px 0px 12px 0px;
 }
 
@@ -59,6 +66,8 @@ nav a:hover {
 
 div.content {
     display: flex;
+    border: 1px solid #000;
+    flex-grow: 1;
     background-color: #2f3f3f;    
     min-height: 100%;
 }
@@ -67,7 +76,9 @@ footer {
     display: flex;
     height: 20vh;
     border: 1px solid #000;
+    margin-top: 8px;
     align-items: center;
+    background-color: #2f3f3f;
     padding: 0vw 0vw 0vw 10vw;
 }
 
@@ -80,12 +91,18 @@ p.introduction {
 /* about */
 
 /* contact */
+div.contacts {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
 div.contact-logos {
+    display: flex;
     width: 66vw;
     padding: 1vw  0px;
     background: radial-gradient(#3f4f4f, #2f3f3f 70%);
-    display: flex;
-    margin: 30vh auto 0 auto;
     justify-content: space-evenly;
 }
 
