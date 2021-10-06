@@ -85,10 +85,16 @@ footer {
 
 
 /* home */
-p.introduction {
-    padding: 32px;
+div.index {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
+p.introduction {
+    font-size: 1.3vw;
+}
 
 /* about */
 
@@ -166,7 +172,6 @@ div.langtonsant {
     justify-content: center;
     align-items: center;
 }
-
 
 canvas {
     border: 1px solid #000;
