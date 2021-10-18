@@ -16,6 +16,45 @@
             <div class="langtonsant" id="canvas">
             </div>
         </div>
+        <div class="langtonsant-text-wrapper">
+            <p>
+                <span>
+                    Langtons Ant ist eine Turingmaschine mit einem zweidimensionalen Speicher und wurde 1986 von Christopher Langton entwickelt. 
+                    Sie ist ein Beispiel dafür, dass ein deterministisches (das heißt nicht zufallsbedingtes) System mit einfachen Regeln 
+                    und einfachem Anfangszustand sowohl für den Menschen visuell überraschend ungeordnet erscheinende als auch regelmäßig erscheinende Zustände annehmen kann. 
+                </span>
+                <br>
+                <br>
+                <span>
+                    Die Ameise bewegt sich in einem endlichem Gitter aus Feldern, mit Übergang zur gegenüber liegenden Seite, die entweder schwarz oder weiß sein können.
+                    Zu Beginn sind alle Felder grau, beziehungsweise werden von der Ameise als weiß gewertet, sie sitzt dabei in der Mitte des Gitters und schaut nach unten.
+                    <br>
+                    <br>
+                    Der Übergang zum nächsten Zustand erfolgt nach folgenden Regeln:
+                </p>
+                    <ul>
+                        <li>
+                            Auf einem weißen Feld drehe 90 Grad nach rechts; auf einem schwarzen Feld drehe 90 Grad nach links.
+                        </li>
+                        <li>
+                            Wechsle die Farbe des Feldes (weiß nach schwarz oder schwarz nach weiß).
+                        </li>
+                        <li>
+                            Gehe zum nächsten Feld in der aktuellen Blickrichtung.
+                        </li>
+                    </ul>
+                <p>
+                </span>
+                <br>
+                <span>
+                    In den ersten ca. 500 Schritten treten wiederholt symmetrische Muster auf.
+                    Danach bildet die Ameise während rund 10.000 Schritten ein komplexes, chaotisches Muster.
+                    Schließlich geht sie dazu über, eine regelmäßige Struktur („Ameisenstraße“) zu bauen: Sie gerät
+                    alle 104 Schritte in denselben (lokalen) Zustand; jeweils diagonal um 2 Felder 
+                    verschoben, und baut die Straße bis ins Unendliche weiter.
+                </span>
+            </p>
+        </div>
     </div>
     
     <script type="text/javascript" src="{{ url_for('static', filename='scripts/p5.min.js') }}"></script>
