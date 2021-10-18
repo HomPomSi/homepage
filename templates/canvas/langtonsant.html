@@ -3,13 +3,13 @@
     <div class="langtonsant-full-wrapper">
         <div class="langtonsant-canvas-controls-wrapper">
             <div class="langtonsant-canvas-controls">
-                <button type="button">
+                <button type="button" onclick="start()">
                     <img alt="Start" src="{{ url_for('static', filename='icon_start.svg')}}">
                 </button>
-                <button type="button">
+                <button type="button" onclick="stop()">
                     <img alt="Stop" src="{{ url_for('static', filename='icon_stop.svg')}}">
                 </button>
-                <button type="button">
+                <button type="button" onclick="reset()">
                     <img alt="Reset" src="{{ url_for('static', filename='icon_reset.svg') }}">
                 </button>
             </div>

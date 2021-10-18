@@ -202,7 +202,7 @@ div.langtonsant-canvas-controls button {
 }
 
 div.langtonsant-canvas-controls button:hover {
-    border-radius: 3vw;
+    border-radius: 7px;
     border: 2px solid #000;
 }
 
