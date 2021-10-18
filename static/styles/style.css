@@ -168,9 +168,47 @@ div.canvas p {
 /* canvas-langtonsant*/
 div.langtonsant {
     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.langtonsant-full-wrapper {
+    display: flex;
     width: 100%;
     justify-content: center;
     align-items: center;
+}
+
+div.langtonsant-canvas-controls-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+div.langtonsant-canvas-controls {
+    display: flex;
+    width: 100%;
+    padding: 8px 0px 8px 0px;
+    justify-content: space-evenly;
+}
+
+div.langtonsant-canvas-controls button {
+    background-color: #2f3f3f;
+    border: 0px;
+    padding: 0px;
+    width: 3vw;
+    height: 3vw;
+}
+
+div.langtonsant-canvas-controls button:hover {
+    border-radius: 3vw;
+    border: 2px solid #000;
+}
+
+div.langtonsant-canvas-controls button img {
+    width: 100%;
+    height: 100%;
 }
 
 canvas {

@@ -1,3 +1,21 @@
+/* HTML functionality */
+
+
+let resetGrid = function (grid) {
+    for (let row = 0; row < grid.length; row++) {
+        for (let column = 0; column < row.length; column++) {
+            grid[row][column] = 0;
+        }
+    }
+    return grid;
+}
+
+
+
+
+
+/* Canvas Script */
+
 let s = function ( p ) {
     let w = 400;
     let h = 400;
