@@ -71,6 +71,7 @@ div.content {
     flex-grow: 1;
     background-color: #2f3f3f;    
     min-height: 100%;
+    padding: 8px;
 }
 
 footer {
@@ -211,10 +212,46 @@ div.langtonsant-canvas-controls button img {
     height: 100%;
 }
 
+div.langtonsant-rules-controls {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+div.langtonsant-rules-controls-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+div.langtonsant-rules-controls-buttons button {
+    background-color: #2f3f3f;
+    width: 3vw;
+    height: 3vw;
+    border: 0px;
+    padding: 0px;
+}
+
+div.langtonsant-rules-controls-buttons button img {
+    width: 95%;
+    height: 95%;
+}
+
+div.langtonsant-rules-controls-buttons button:hover {
+    border: 2px solid #000;
+    border-radius: 7px;
+}
+
+div.langtonsant-rules-controls p {
+    padding: 8px 0px 8px 0px;
+    text-align: center;
+    font-size: 1.2vw;
+    font-weight: bold;
+}
+
 div.langtonsant-text-wrapper {
     max-width: 40%;
 }
-
 
 div.langtonsant-text-wrapper ul {
     margin-left: 22px;

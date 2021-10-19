@@ -6,16 +6,35 @@ let x = w/2;
 let y = h/2;
 let direction = 0;
 let speed = 1024;
+let rules = [];
+let colors = [];
+let rules_map = {};
+
+const color_button = document.getElementById("langtonsant-color-button");
+const current_rules = document.getElementById("current-rules");
 
 let start = function () {
     running = true;
 }
 
+
 let stop = function() {
     running = false;
 }
 
+let add_rule = function( direction_delta ) { 
+    rules.push(direction_delta)
+    colors.push(color_button.style.backgroundColor);
+    current_rules.textContent = current_rules.textContent.concat(rules_map[direction_delta])
+}
 
+let make_color = function() {
+    let color = new String("#").concat(Math.floor(Math.random() * 256).toString(16), Math.floor(Math.random() * 256).toString(16), Math.floor(Math.random() * 256).toString(16));
+    while (color.length < 7) {
+        color = color.concat("0");
+    }
+    color_button.style.backgroundColor = color;
+} 
 
 let s = function ( p ) {
     
@@ -56,6 +75,23 @@ let s = function ( p ) {
     p.setup = function() {
         p.createCanvas(w, h);
         p.background(70);
+        
+        document.getElementById("langtonsant-color-button").style.backgroundColor = make_color();
+        
+        rules = [1, -1];
+        colors = ["#ffffff", "#000000"];
+        
+        rules_map = {
+            1: "R",
+            "-1": "L",
+            0: "F",
+            2: "B"
+        }
+
+        for (let rule = 0; rule < rules.length; rule++) {
+            current_rules.textContent = current_rules.textContent.concat(rules_map[rules[rule]]);
+        }
+
         for (let i = 0; i < h; i++) {
             grid[i] = [];
             for (let j = 0; j < w; j++) {
@@ -93,4 +129,12 @@ let reset = function () {
     const ctx = canvas.getContext("2d");
     ctx.fillStyle = "#464646";
     ctx.fillRect(0, 0, w, h);
+}
+
+
+let reset_all = function() {
+    rules = [1, -1];
+    colors = [255, 0];
+    current_rules.textContent = "RL";
+    reset();
 }
