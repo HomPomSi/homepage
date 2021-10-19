@@ -26,7 +26,7 @@ let add_rule = function( direction_delta ) {
     if (rules.length < 20) {
         rules.push(direction_delta)
         colors.push(color_button.style.backgroundColor);
-        current_rules.textContent = current_rules.textContent.concat(rules_map[direction_delta])
+        add_rule_to_current_rules(rules_map[direction_delta]);
     }
 }
 
@@ -34,8 +34,16 @@ let delete_rule = function() {
     if (rules.length > 0) {
         let rule = rules.pop();
         colors.pop();
-        current_rules.textContent = current_rules.textContent.substring(0, current_rules.textContent.length - 1)
+        current_rules.removeChild(current_rules.lastChild);
     }
+}
+
+let add_rule_to_current_rules = function( rule_char ) {
+    let span = document.createElement("span");
+    span.className = "langtonsant-rule-char".concat((rules.length - 1).toString());
+    span.textContent = rule_char;
+    span.style.color = colors[rules.length - 1];
+    current_rules.appendChild(span);
 }
 
 let make_color = function() {
@@ -88,18 +96,18 @@ let s = function ( p ) {
         
         document.getElementById("langtonsant-color-button").style.backgroundColor = make_color();
         
-        rules = [1, -1];
         colors = ["#ffffff", "#000000"];
+        rules = [1];
+        add_rule_to_current_rules("R");
+        rules = [1, -1];
+        add_rule_to_current_rules("L");
+
         
         rules_map = {
             1: "R",
             "-1": "L",
             0: "F",
             2: "B"
-        }
-
-        for (let rule = 0; rule < rules.length; rule++) {
-            current_rules.textContent = current_rules.textContent.concat(rules_map[rules[rule]]);
         }
 
         for (let i = 0; i < h; i++) {
@@ -143,8 +151,10 @@ let reset = function () {
 
 
 let reset_all = function() {
+    colors = ["#ffffff", "#000000"];
+    rules = [1];
+    add_rule_to_current_rules("R");
     rules = [1, -1];
-    colors = [255, 0];
-    current_rules.textContent = "RL";
+    add_rule_to_current_rules("L");
     reset();
 }
