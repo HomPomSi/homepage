@@ -30,6 +30,14 @@ let add_rule = function( direction_delta ) {
     }
 }
 
+let delete_rule = function() {
+    if (rules.length > 0) {
+        let rule = rules.pop();
+        colors.pop();
+        current_rules.textContent = current_rules.textContent.substring(0, current_rules.textContent.length - 1)
+    }
+}
+
 let make_color = function() {
     let color = new String("#").concat(Math.floor(Math.random() * 256).toString(16), Math.floor(Math.random() * 256).toString(16), Math.floor(Math.random() * 256).toString(16));
     while (color.length < 7) {
