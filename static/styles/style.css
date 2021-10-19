@@ -197,7 +197,7 @@ div.langtonsant-canvas-controls {
 div.langtonsant-canvas-controls button {
     background-color: #2f3f3f;
     border: 0px;
-    padding: 0px;
+    padding: 4px;
     width: 64px;
     height: 64px;
 }
@@ -229,7 +229,7 @@ div.langtonsant-rules-controls-buttons button {
     width: 64px;
     height: 64px;
     border: 0px;
-    padding: 0px;
+    padding: 4px;
 }
 
 div.langtonsant-rules-controls-buttons button img {
