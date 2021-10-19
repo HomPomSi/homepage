@@ -22,10 +22,12 @@ let stop = function() {
     running = false;
 }
 
-let add_rule = function( direction_delta ) { 
-    rules.push(direction_delta)
-    colors.push(color_button.style.backgroundColor);
-    current_rules.textContent = current_rules.textContent.concat(rules_map[direction_delta])
+let add_rule = function( direction_delta ) {
+    if (rules.length < 20) {
+        rules.push(direction_delta)
+        colors.push(color_button.style.backgroundColor);
+        current_rules.textContent = current_rules.textContent.concat(rules_map[direction_delta])
+    }
 }
 
 let make_color = function() {
