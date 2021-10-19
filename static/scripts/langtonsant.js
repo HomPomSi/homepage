@@ -66,14 +66,10 @@ let s = function ( p ) {
     }
 
     let move = function() {
-        if (grid[x][y]%2 == 0) {
-            direction = (direction + 1)%4;  
-            color = 255;
-        } else {
-            direction = ((direction - 1)%4 + 4)%4;
-            color = 0;
-        }
-        
+        let value = grid[x][y]%rules.length;
+        direction = ((direction + rules[value])%4 + 4)%4;
+        color = colors[value];
+
         p.fill(color);
         grid[x][y] += 1;
         p.rect(x, y, 1, 1);
@@ -96,7 +92,7 @@ let s = function ( p ) {
         
         document.getElementById("langtonsant-color-button").style.backgroundColor = make_color();
         
-        colors = ["#ffffff", "#000000"];
+        colors = ["#000000", "#ffffff"];
         rules = [1];
         add_rule_to_current_rules("R");
         rules = [1, -1];
@@ -151,7 +147,10 @@ let reset = function () {
 
 
 let reset_all = function() {
-    colors = ["#ffffff", "#000000"];
+    while (current_rules.firstChild) {
+        current_rules.removeChild(current_rules.lastChild);
+    }
+    colors = ["#000000", "#ffffff"];
     rules = [1];
     add_rule_to_current_rules("R");
     rules = [1, -1];
