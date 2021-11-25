@@ -113,7 +113,6 @@ div.contact-logos {
     display: flex;
     width: 66vw;
     padding: 1vw  0px;
-    background: radial-gradient(#3f4f4f, #2f3f3f 70%);
     justify-content: space-evenly;
 }
 
