@@ -69,7 +69,8 @@ div.content {
     display: flex;
     border: 1px solid #000;
     flex-grow: 1;
-    background-color: #2f3f3f;    
+    /* background-color: #2f3f3f; */
+    background: linear-gradient(-1deg, #293929, #2f3f3f);
     min-height: 100%;
     padding: 8px;
 }
@@ -80,7 +81,7 @@ footer {
     border: 1px solid #000;
     margin-top: 8px;
     align-items: center;
-    background-color: #2f3f3f;
+    background-color: #293929;
     padding: 0vw 0vw 0vw 10vw;
 }
 
@@ -189,12 +190,17 @@ div.langtonsant-canvas-controls-wrapper {
 
 div.langtonsant-canvas-controls {
     display: flex;
+    flex-direction: column;
+    width: 100%
+}
+
+div.langtonsant-canvas-controls-buttons {
+    display: flex;
     width: 100%;
-    padding: 8px 0px 8px 0px;
     justify-content: space-evenly;
 }
 
-div.langtonsant-canvas-controls button {
+div.langtonsant-canvas-controls-buttons button {
     background-color: #2f3f3f;
     border: 0px;
     padding: 4px;
@@ -202,14 +208,24 @@ div.langtonsant-canvas-controls button {
     height: 64px;
 }
 
-div.langtonsant-canvas-controls button:hover {
+div.langtonsant-canvas-controls-buttons button:hover {
     border-radius: 7px;
     border: 2px solid #000;
 }
 
-div.langtonsant-canvas-controls button img {
+div.langtonsant-canvas-controls-buttons button img {
     width: 100%;
     height: 100%;
+}
+
+p.langtonsant-current-steps {
+    max-width: 100%;
+    height: 28px;
+    margin: 8px 0px 8px 0px;
+    text-align: center;
+    font-size: 23px;
+    font-weight: bold;
+    border: 1px solid #000;
 }
 
 div.langtonsant-rules-controls {
@@ -225,7 +241,7 @@ div.langtonsant-rules-controls-buttons {
 }
 
 div.langtonsant-rules-controls-buttons button {
-    background-color: #2f3f3f;
+    background-color: #293929;
     width: 64px;
     height: 64px;
     border: 0px;
@@ -242,7 +258,7 @@ div.langtonsant-rules-controls-buttons button:hover {
     border-radius: 7px;
 }
 
-div.langtonsant-rules-controls p {
+p.langtonsant-current-rules {
     max-width: 100%;
     height: 28px;
     margin: 8px 0px 8px 0px;
@@ -254,6 +270,7 @@ div.langtonsant-rules-controls p {
 
 div.langtonsant-text-wrapper {
     max-width: 40%;
+    font-size: 1vw;
 }
 
 div.langtonsant-text-wrapper ul {

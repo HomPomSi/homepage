@@ -3,26 +3,31 @@
     <div class="langtonsant-full-wrapper" id="langtonsant-full-wrapper">
         <div class="langtonsant-canvas-controls-wrapper">
             <div class="langtonsant-canvas-controls">
-                <button type="button" onclick="start()" title="Start">
-                    <img alt="Start" src="{{ url_for('static', filename='icon_start.svg')}}">
-                </button>
-                <button type="button" onclick="stop()" title="Stop">
-                    <img alt="Stop" src="{{ url_for('static', filename='icon_stop.svg')}}">
-                </button>
-                <button type="button" onclick="reset()" title="Reset">
-                    <img alt="Reset" src="{{ url_for('static', filename='icon_reset.svg') }}">
-                </button>
-                <button type="button" onclick="reset_all()" title="Reset all">
-                    <img alt="Reset All" src="{{ url_for('static', filename='icon_reset_all.svg') }}">
-                </button>
-                <button type="button" onclick="delete_rule()" title="Delete the last rule">
-                    <img alt="Delete" src="{{ url_for('static', filename='icon_delete.svg') }}">
-                </button>
+                <div class="langtonsant-canvas-controls-buttons">
+                    <button type="button" onclick="start()" title="Start">
+                        <img alt="Start" src="{{ url_for('static', filename='icon_start.svg')}}">
+                    </button>
+                    <button type="button" onclick="stop()" title="Stop">
+                        <img alt="Stop" src="{{ url_for('static', filename='icon_stop.svg')}}">
+                    </button>
+                    <button type="button" onclick="reset()" title="Reset">
+                        <img alt="Reset" src="{{ url_for('static', filename='icon_reset.svg') }}">
+                    </button>
+                    <button type="button" onclick="reset_all()" title="Reset all">
+                        <img alt="Reset All" src="{{ url_for('static', filename='icon_reset_all.svg') }}">
+                    </button>
+                    <button type="button" onclick="delete_rule()" title="Delete the last rule">
+                        <img alt="Delete" src="{{ url_for('static', filename='icon_delete.svg') }}">
+                    </button>
+                </div>
+                <p class="langtonsant-current-steps" id="langtonsant-current-steps" title="Number of steps">
+                    0
+                </p>
             </div>
             <div class="langtonsant" id="canvas">
             </div>
             <div class="langtonsant-rules-controls">
-                <p class="current-rules" id="current-rules">
+                <p class="langtonsant-current-rules" id="langtonsant-current-rules" title="Current set of rules">
                 </p>
                 <div class="langtonsant-rules-controls-buttons">
                     <button type="button" onclick="add_rule(-1)" title="Add LeftRoatation rule">
@@ -31,14 +36,14 @@
                     <button type="button" onclick="add_rule(1)" title="Add RightRotation rule">
                         <img alt="Right" src="{{ url_for('static', filename='icon_right.svg') }}">
                     </button>
+                    <button id="langtonsant-color-button" style="border-radius: 7px;" type="button" onclick="make_color()" title="Make new color">
+                        <img alt="C" style="font-size: 39px; font-weight: bold; width: 32px; height: 32px;" src="{{ url_for('static', filename='icon_color.svg') }}">
+                    </button>
                     <button type="button" onclick="add_rule(0)" title="Add NoRotation rule">
                         <img alt="Forward" src="{{ url_for('static', filename='icon_forward.svg') }}">
                     </button>
                     <button type="button" onclick="add_rule(2)" title="Add TurnAround rulr">
                         <img alt="Backwards" src="{{ url_for('static', filename='icon_backwards.svg') }}">
-                    </button>
-                    <button id="langtonsant-color-button" style="border-radius: 7px;" type="button" onclick="make_color()" title="Make new color">
-                        <img alt="C" style="font-size: 39px; font-weight: bold; width: 32px; height: 32px;" src="{{ url_for('static', filename='icon_color.svg') }}">
                     </button>
                 </div>
             </div>

@@ -5,15 +5,21 @@ let h = 400;
 let x = w/2;
 let y = h/2;
 let direction = 0;
-let speed = 1024;
+let speed = 2**13;
 let rules = [];
 let colors = [];
 let rules_map = {};
+let steps = 0;
 
 const color_button = document.getElementById("langtonsant-color-button");
-const current_rules = document.getElementById("current-rules");
+const current_rules = document.getElementById("langtonsant-current-rules");
+const current_steps = document.getElementById("langtonsant-current-steps");
 
-let start = function () {
+let numberWithDots = function(number) {     
+    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "."); 
+}
+
+let start = function() {
     running = true;
 }
 
@@ -98,7 +104,6 @@ let s = function ( p ) {
         rules = [1, -1];
         add_rule_to_current_rules("L");
 
-        
         rules_map = {
             1: "R",
             "-1": "L",
@@ -121,18 +126,21 @@ let s = function ( p ) {
             for (let loop = 0; loop < speed; loop++){
                 move();
             }
+            steps += speed;
+            current_steps.textContent = numberWithDots(steps);
         }
     }
 }
 
 let myp5 = new p5(s, "canvas");
 
-
 let reset = function () {
     x = w/2;
     y = h/2;
     direction = 0;
     running = false;
+    steps = 0;
+    current_steps.textContent = "0";
     for (let i = 0; i < h; i++) {
         grid[i] = [];
         for (let j = 0; j < w; j++) {
